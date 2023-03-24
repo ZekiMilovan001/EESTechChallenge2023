@@ -8,13 +8,14 @@ public class MouseScript : MonoBehaviour
     void Start()
     {
          
-        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //transform.position.z = 0;
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePosition.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
+        transform.position = new Vector3(mousePosition.x, mousePosition.y, 0);
     }
 }
