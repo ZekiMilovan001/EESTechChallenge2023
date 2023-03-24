@@ -7,19 +7,24 @@ public class GameManager : MonoBehaviour
 {
 
     public Transform panel;
-    public TextMeshProUGUI title;
+    public bool jesusWasThere;
+    
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        title.text = "Naslov";
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    public void abadabagas()
+    {
+        Debug.Log("TEST");
     }
 }
