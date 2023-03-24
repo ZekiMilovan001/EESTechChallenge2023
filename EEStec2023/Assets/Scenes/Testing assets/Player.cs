@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+
+    public SavePlayerPos setPlayerPos;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        transform.position = setPlayerPos.playerPos;
     }
 
     // Update is called once per frame
@@ -30,11 +33,13 @@ public class Player : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "NPC" )
+        if (collision.gameObject.tag == "Guard" )
         {
             Debug.Log("Press E");
             PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex);
-            SceneManager.LoadScene("TEST");
+            DontDestroyOnLoad(setPlayerPos);
+            setPlayerPos.playerPos = transform.position;
+            SceneManager.LoadScene("FightingGuardScene");
         }
 
         collision.gameObject.GetComponent<TalkableNPC>().doSmthng();

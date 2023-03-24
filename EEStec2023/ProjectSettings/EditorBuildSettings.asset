@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Testing assets/ZeljoTestingScene.unity
     guid: 7b8e2fe466409b34983e9dfe6f11be0b
   - enabled: 1
-    path: Assets/Scenes/Testing assets/TEST.unity
+    path: Assets/Scenes/Testing assets/FightingGuardScene.unity
     guid: 499abd561ed76194482612ad75cb68e7
   m_configObjects: {}

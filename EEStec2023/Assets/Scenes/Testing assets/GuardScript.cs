@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class backToOldScene : MonoBehaviour
+public class GuardScript : MonoBehaviour
 {
 
     public static int[] positions = { -5, -10, -15, -10, -5, 0, 5, 10, 15, 10, 5, 0 };
@@ -20,7 +20,7 @@ public class backToOldScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+        if (health<=0)
             SceneManager.LoadScene(PlayerPrefs.GetInt("SavedScene"));
 
         if (touching && Input.GetMouseButtonDown(0))

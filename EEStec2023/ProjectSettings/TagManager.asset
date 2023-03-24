@@ -6,6 +6,7 @@ TagManager:
   tags:
   - NPC
   - MOUSE
+  - Guard
   layers:
   - Default
   - TransparentFX
