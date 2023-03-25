@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LoadSecretSupper : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class LoadSecretSupper : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+
+        Debug.Log("DOKLE VISE");
+        SceneManager.LoadScene("LEVEL3");
     }
 }

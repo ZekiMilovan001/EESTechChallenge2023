@@ -41,20 +41,20 @@ public class Level2Jesus : MonoBehaviour
     {
         nailsEmoji.SetActive(false);
 
-        transform.position = new Vector3(-7f, -2.5f, 0);
+        transform.position = new Vector3(-6.81f, -2.5f, 0);
         whaleEmoji.SetActive(false);
     }
 
     void Start()
     {
-
+        transform.position = new Vector3(-6.81f, -2.5f, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
 
- 
+        //transform.position = new Vector3(-6.81f, -2.5f, 0);
 
 
 
