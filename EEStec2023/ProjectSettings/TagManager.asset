@@ -10,11 +10,12 @@ TagManager:
   - JESUS
   - Water
   - STOP
+  - PROP
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Chars
   - Water
   - UI
   - 

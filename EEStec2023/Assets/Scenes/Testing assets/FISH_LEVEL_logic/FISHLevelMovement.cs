@@ -14,6 +14,10 @@ public class FISHLevelMovement : MonoBehaviour
 
     public FIRSTLevel fstLevel;
 
+    //EMOJIS
+    public GameObject whaleEmoji;
+    public GameObject coolEmoji;
+
     public static int[] positions = { -1, -3, -1, 1, 3, 1};
     public int N = positions.Length;
 
@@ -23,6 +27,16 @@ public class FISHLevelMovement : MonoBehaviour
     private float x, y;
     private int JUGGLE_PARAM = 40;
     // Start is called before the first frame update
+
+
+    private void Awake()
+    {
+        coolEmoji.SetActive(true);
+        StartCoroutine(Wait(coolEmoji, 2.5f));
+        transform.position = new Vector3(-10f, -0.64f, 0);
+        whaleEmoji.SetActive(false);
+    }
+
     void Start()
     {
         
@@ -33,7 +47,7 @@ public class FISHLevelMovement : MonoBehaviour
     {
         if (!fstLevel.STOP) {
             x = transform.position.x + Time.deltaTime * 0.1f * speed;
-            Vector3 newPos = new Vector3(x, -3.8f, 0);
+            Vector3 newPos = new Vector3(x, -0.64f, 0);
             transform.position = newPos;
         }
         
@@ -92,6 +106,7 @@ public class FISHLevelMovement : MonoBehaviour
         SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
         sr.sprite = handsDOWN;
         collision.GetComponent<SpriteRenderer>().color = new Color(0.8f, 0.2f, 0.2f, 1.0f);
+       
         Debug.Log("End Coroutine");
     }
     IEnumerator SummonFish()
@@ -111,6 +126,16 @@ public class FISHLevelMovement : MonoBehaviour
         sr.sprite = handsDOWN;
         fstLevel.interactedWithJesus = true;
         fstLevel.STOP = false;
+        whaleEmoji.SetActive(true);
+        StartCoroutine(Wait(whaleEmoji,0.9f));
+        Debug.Log("End Coroutine");
+    }
+    IEnumerator Wait(GameObject emoji,float t)
+    {
+        Debug.Log("Start Coroutine");
+
+        yield return new WaitForSeconds(t);
+        emoji.SetActive(false);
         Debug.Log("End Coroutine");
     }
 
