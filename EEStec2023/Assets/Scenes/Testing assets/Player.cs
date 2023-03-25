@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    private int speed = 10;
+    private int speed = 4;
 
     public void Move()
     {
