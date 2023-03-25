@@ -16,7 +16,7 @@ public class FISHLevelMovement : MonoBehaviour
 
     //EMOJIS
     public GameObject whaleEmoji;
-    public GameObject coolEmoji;
+    public GameObject nailsEmoji;
 
     public static int[] positions = { -1, -3, -1, 1, 3, 1};
     public int N = positions.Length;
@@ -31,8 +31,8 @@ public class FISHLevelMovement : MonoBehaviour
 
     private void Awake()
     {
-        coolEmoji.SetActive(true);
-        StartCoroutine(Wait(coolEmoji, 2.5f));
+        nailsEmoji.SetActive(false);
+        
         transform.position = new Vector3(-10f, -0.64f, 0);
         whaleEmoji.SetActive(false);
     }
@@ -52,7 +52,14 @@ public class FISHLevelMovement : MonoBehaviour
         }
         
     }
-
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Water")
+        {
+            nailsEmoji.SetActive(true);
+            StartCoroutine(Wait(nailsEmoji, 0.8f));
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Water") {
@@ -93,7 +100,7 @@ public class FISHLevelMovement : MonoBehaviour
         {
 
             transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, positions[x]);
-            
+                //nailsEmoji.transform.rotation.SetEulerAngles(0, 0, 0);
 
                 //Increase or decrease the parameter of WaitForSeconds
                 //to test different speeds.
@@ -106,7 +113,8 @@ public class FISHLevelMovement : MonoBehaviour
         SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
         sr.sprite = handsDOWN;
         collision.GetComponent<SpriteRenderer>().color = new Color(0.8f, 0.2f, 0.2f, 1.0f);
-       
+        //nailsEmoji.SetActive(true);
+        //StartCoroutine(Wait(nailsEmoji, 3.6f));
         Debug.Log("End Coroutine");
     }
     IEnumerator SummonFish()
@@ -116,7 +124,7 @@ public class FISHLevelMovement : MonoBehaviour
             for (int x = 1; x < N; x++)
             {
 
-                transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, positions[x]);
+                //transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, positions[x]);
 
                 yield return new WaitForSeconds(0.01f);
             }

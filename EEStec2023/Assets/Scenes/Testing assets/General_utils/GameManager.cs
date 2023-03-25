@@ -32,8 +32,8 @@ public class GameManager : MonoBehaviour
 
         canvas.SetActive(false);
         fstLevel.STOP = false;
-        //Debug.Log("Loading level 2");
-        //SceneManager.LoadScene("LEVEL2");
+        Debug.Log("Loading level 2");
+        SceneManager.LoadScene("LEVEL2");
     }
 
     IEnumerator Wait(float t)

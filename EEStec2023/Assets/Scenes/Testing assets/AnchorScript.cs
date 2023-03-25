@@ -11,7 +11,7 @@ public class AnchorScript : MonoBehaviour
 
     private void Awake()
     {
-        transform.position = parrent.transform.position;
+        //transform.position = parrent.transform.position;
     }
     void Start()
     {

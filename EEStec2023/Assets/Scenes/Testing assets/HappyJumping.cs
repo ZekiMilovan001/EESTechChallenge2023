@@ -5,7 +5,7 @@ using UnityEngine;
 public class HappyJumping : MonoBehaviour
 {
 
-    public int JUMP_PARAM = 700;
+    public int JUMP_PARAM = 1200;
     public static float[] jumpy = { 0.2f,  0.6f, 0.8f, 1f, 0.8f,0.4f,0.2f };
     public int N = jumpy.Length;
 
