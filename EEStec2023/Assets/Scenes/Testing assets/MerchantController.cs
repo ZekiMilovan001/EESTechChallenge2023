@@ -7,7 +7,12 @@ public class MerchantController : MonoBehaviour
     //[SerializeField]
     public Vector3 rotationCenter;
 
+    public SecondLvl sndLvl;
+
     public GameObject monyEmoji;
+    public GameObject TEST;
+    //public GameObject toSwap;
+    public float MU = 0.0005f;
     [SerializeField]
     float rotationRadius = 2f, angularSpeed = 2f,offsetY = 1;
 
@@ -18,16 +23,21 @@ public class MerchantController : MonoBehaviour
 
     private void Awake()
     {
+        TEST.SetActive(false);
         monyEmoji.SetActive(false);
         rotationCenter = transform.position;
         Vector3 tmp = rotationCenter;
         monyEmoji.transform.position = new Vector3(tmp.x, tmp.y + offsetY,0);
     }
 
-
+    bool wasHere = false;
     void Update()
     {
-
+        if (sndLvl.LAZARUS_ALIVE && !wasHere) {
+            TEST.SetActive(true);
+            monyEmoji.SetActive(false);
+            wasHere = true;
+        }
 
         posX = rotationCenter.x + Mathf.Cos(angle) * rotationRadius;
         posY = rotationCenter.y + Mathf.Sin(angle) * rotationRadius;
@@ -37,7 +47,7 @@ public class MerchantController : MonoBehaviour
         monyEmoji.transform.position = new Vector3(tmp.x, tmp.y + offsetY, 0);
 
         rnd = Random.Range(0, 300);
-        if (rnd < 0.0005) {
+        if (rnd < MU && !sndLvl.LAZARUS_ALIVE) {
             monyEmoji.SetActive(true);
             StartCoroutine(Wait(monyEmoji, 0.9f));
         }
@@ -48,7 +58,6 @@ public class MerchantController : MonoBehaviour
             angle = 0f;
     }
 
-    private Vector3 initialPos;
 
 
 

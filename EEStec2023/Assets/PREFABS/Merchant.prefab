@@ -99,7 +99,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationCenter: {x: 0, y: 0, z: 0}
+  sndLvl: {fileID: 0}
   monyEmoji: {fileID: 8498210812810767979}
+  toSwap: {fileID: 21300000, guid: e183fb0a6ca888a4788bb6cb3a4ee5fc, type: 3}
   rotationRadius: 0.07
   angularSpeed: 2
   offsetY: 1

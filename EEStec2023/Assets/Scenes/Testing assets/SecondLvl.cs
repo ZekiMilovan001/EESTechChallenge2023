@@ -15,6 +15,7 @@ public class SecondLvl : MonoBehaviour
     public static SecondLvl Instance;
     public bool interactedWithJesus = true;
     public bool LAZARUS_ALIVE = false;
+    public bool doneUI = false;
 
     private void Awake()
     {
@@ -42,9 +43,10 @@ public class SecondLvl : MonoBehaviour
 
     public void helpLazarus()
     {
+        doneUI = true;
         LAZARUS_ALIVE = true;
         Lazarus.GetComponent<SpriteRenderer>().sprite = AliveLazarus;
-        Lazarus.transform.rotation.SetEulerAngles(0, 0, 90);
+        Lazarus.transform.eulerAngles =  new Vector3(0, 0, 0);
         canvas.SetActive(false);
     }
 

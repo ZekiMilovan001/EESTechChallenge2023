@@ -2,15 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lazarus : MonoBehaviour
+public class LoadSecretSupper : MonoBehaviour
 {
-    public GameObject canvas;
-    public SecondLvl sndLvl;
-
-    private void Awake()
-    {
-        canvas.SetActive(false);
-    }
     // Start is called before the first frame update
     void Start()
     {
@@ -24,9 +17,6 @@ public class Lazarus : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player" && !sndLvl.doneUI)
-        {
-            canvas.SetActive(true);
-        }
+        
     }
 }
