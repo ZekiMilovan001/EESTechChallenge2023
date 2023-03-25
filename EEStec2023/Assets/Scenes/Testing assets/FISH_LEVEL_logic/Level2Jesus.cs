@@ -6,13 +6,14 @@ public class Level2Jesus : MonoBehaviour
 {
 
     public float speed = 0.001f;
-
+    public Vector3 LazarusLocation;
     public Sprite handsUP;
     public Sprite handsDOWN;
     public SpriteRenderer JesusIMG;
     public GameObject canvas;
-
     public FIRSTLevel fstLevel;
+
+    public SecondLvl sndLevel;
 
     //EMOJIS
     public GameObject whaleEmoji;
@@ -29,11 +30,18 @@ public class Level2Jesus : MonoBehaviour
     // Start is called before the first frame update
 
 
+    //Pathing to lazarus
+
+    private float randX;
+    private float randY;
+
+
+
     private void Awake()
     {
         nailsEmoji.SetActive(false);
 
-        transform.position = new Vector3(-10f, -1.52f, 0);
+        transform.position = new Vector3(-7f, -2.5f, 0);
         whaleEmoji.SetActive(false);
     }
 
@@ -45,11 +53,12 @@ public class Level2Jesus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-            x = transform.position.x + Time.deltaTime * 0.1f * speed;
-            Vector3 newPos = new Vector3(x, -1.52f, 0);
-            transform.position = newPos;
-        
+
+ 
+
+
+
+
 
     }
     private void OnTriggerExit2D(Collider2D collision)

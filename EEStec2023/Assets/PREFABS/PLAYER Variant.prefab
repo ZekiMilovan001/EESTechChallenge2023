@@ -9,8 +9,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 949986511633293568, guid: 02d0af29fabecbd44b6e0e3ef21e88c0, type: 3}
       propertyPath: m_Name
-      value: PLAYER
+      value: PLAYER Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 949986511633293572, guid: 02d0af29fabecbd44b6e0e3ef21e88c0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 94e9a6a1822b8cb479ed125d10a8eaa1, type: 3}
     - target: {fileID: 949986511633293572, guid: 02d0af29fabecbd44b6e0e3ef21e88c0, type: 3}
       propertyPath: m_SortingOrder
       value: 10
