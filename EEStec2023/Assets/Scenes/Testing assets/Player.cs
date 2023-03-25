@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
 
-    public SavePlayerPos setPlayerPos;
+    //public SavePlayerPos setPlayerPos;
 
     // Start is called before the first frame update
     void Start()
@@ -37,12 +37,12 @@ public class Player : MonoBehaviour
         {
             Debug.Log("Press E");
             PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex);
-            DontDestroyOnLoad(setPlayerPos);
-            setPlayerPos.playerPos = transform.position;
+            //DontDestroyOnLoad(setPlayerPos);
+            //setPlayerPos.playerPos = transform.position;
             SceneManager.LoadScene("FightingGuardScene");
         }
 
-        collision.gameObject.GetComponent<TalkableNPC>().doSmthng();
+        //collision.gameObject.GetComponent<TalkableNPC>().doSmthng();
     }
 
 }
