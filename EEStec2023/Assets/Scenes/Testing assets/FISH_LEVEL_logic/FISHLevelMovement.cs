@@ -105,8 +105,8 @@ public class FISHLevelMovement : MonoBehaviour
                 //Increase or decrease the parameter of WaitForSeconds
                 //to test different speeds.
                 yield return new WaitForSeconds(0.01f);
-                collision.GetComponent<SpriteRenderer>().color = new Color(0.0f + 0.003f * (float)(x*i),
-                                0.0f + 0.000001f * (float)(x * i), 0.0f + 0.000001f * (float)(x * i), 1.0f);
+                collision.GetComponent<SpriteRenderer>().color = new Color(0.0f + 0.0037f * (float)(x*i),
+                                0.0f + 0.000001f * (float)(x * i), 0+ 0.00004f * (float)(x * i), 1.0f);
             }
         fstLevel.STOP = false;
         gameObject.GetComponent<SpriteRenderer>().sprite = handsDOWN;

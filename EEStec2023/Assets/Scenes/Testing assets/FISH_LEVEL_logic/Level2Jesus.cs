@@ -33,7 +33,7 @@ public class Level2Jesus : MonoBehaviour
     {
         nailsEmoji.SetActive(false);
 
-        transform.position = new Vector3(-10f, -0.64f, 0);
+        transform.position = new Vector3(-10f, -1.52f, 0);
         whaleEmoji.SetActive(false);
     }
 
@@ -45,12 +45,11 @@ public class Level2Jesus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!fstLevel.STOP)
-        {
+        
             x = transform.position.x + Time.deltaTime * 0.1f * speed;
-            Vector3 newPos = new Vector3(x, -0.64f, 0);
+            Vector3 newPos = new Vector3(x, -1.52f, 0);
             transform.position = newPos;
-        }
+        
 
     }
     private void OnTriggerExit2D(Collider2D collision)
