@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-
+    Animator animator;
     //public SavePlayerPos setPlayerPos;
 
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         //transform.position = setPlayerPos.playerPos;
     }
 
@@ -18,6 +19,15 @@ public class Player : MonoBehaviour
     void Update()
     {
         Move();
+
+        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+        {
+            animator.SetBool("isWalking", true);
+        }
+        else
+        {
+            animator.SetBool("isWalking", false);
+        }
     }
 
     private int speed = 10;
