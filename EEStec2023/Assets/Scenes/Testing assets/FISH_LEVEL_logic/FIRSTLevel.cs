@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class FIRSTLevel : MonoBehaviour
 {
+
+
+    //public GameObject canvas;
+
     public static FIRSTLevel Instance;
     public bool interactedWithJesus = false;
+    public bool STOP = false;
 
     private void Awake()
     {

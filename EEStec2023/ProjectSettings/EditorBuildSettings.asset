@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Testing assets/FightingGuardScene.unity
     guid: 499abd561ed76194482612ad75cb68e7
+  - enabled: 1
+    path: Assets/LEVELS/LEVEL2.unity
+    guid: fa365c7eae4f22245853eef803837841
   m_configObjects: {}

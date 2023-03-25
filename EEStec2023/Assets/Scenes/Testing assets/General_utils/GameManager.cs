@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
 
     public Transform panel;
-    public bool jesusWasThere;
+    public GameObject canvas;
+    public FIRSTLevel fstLevel;
     
 
 
@@ -23,8 +25,25 @@ public class GameManager : MonoBehaviour
     {
         
     }
-    public void abadabagas()
+
+
+    public void showCanvas()
     {
-        Debug.Log("TEST");
+
+        canvas.SetActive(false);
+        fstLevel.STOP = false;
+        //Debug.Log("Loading level 2");
+        //SceneManager.LoadScene("LEVEL2");
     }
+
+    IEnumerator Wait(float t)
+    {
+        Debug.Log("Start Coroutine");
+
+        yield return new WaitForSeconds(t);
+        
+        Debug.Log("End Coroutine");
+    }
+
+
 }
