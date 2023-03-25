@@ -20,17 +20,17 @@ public class Player : MonoBehaviour
     {
         Move();
 
-        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+       /* if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         {
             animator.SetBool("isWalking", true);
         }
         else
         {
             animator.SetBool("isWalking", false);
-        }
+        } */
     }
 
-    private int speed = 4;
+    public float speed = 2.7f;
 
     public void Move()
     {

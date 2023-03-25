@@ -21,7 +21,7 @@ public class GuardScript : MonoBehaviour
     void Update()
     {
         if (health<=0)
-            SceneManager.LoadScene(PlayerPrefs.GetInt("SavedScene"));
+            SceneManager.LoadScene("Dungeon");
 
         if (touching && Input.GetMouseButtonDown(0))
         {

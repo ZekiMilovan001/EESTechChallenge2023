@@ -5,16 +5,31 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Testing assets/ZeljoTestingScene.unity
     guid: 7b8e2fe466409b34983e9dfe6f11be0b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Testing assets/FightingGuardScene.unity
     guid: 499abd561ed76194482612ad75cb68e7
   - enabled: 1
+    path: Assets/LEVELS/LEVEL1.unity
+    guid: 22b535041846b37439dcdba39bdfab9e
+  - enabled: 1
     path: Assets/LEVELS/LEVEL2.unity
     guid: fa365c7eae4f22245853eef803837841
+  - enabled: 1
+    path: Assets/LEVELS/LEVEL3.unity
+    guid: 1b5eb263a441cd54e9affff39eeef7e1
+  - enabled: 1
+    path: Assets/LEVELS/Guard.unity
+    guid: f8f85e5676df0f643b850f526e26c1aa
+  - enabled: 1
+    path: Assets/LEVELS/Dungeon.unity
+    guid: 7d4a6595b0badb042b5bb69300066f05
+  - enabled: 1
+    path: Assets/LEVELS/THE_END.unity
+    guid: bfd40d3e7b56b5344b5849907e2779f3
   m_configObjects: {}

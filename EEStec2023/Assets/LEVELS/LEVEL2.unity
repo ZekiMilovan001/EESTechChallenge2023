@@ -601,6 +601,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2044611418}
     m_Modifications:
+    - target: {fileID: 4968295666471381136, guid: db602cfbca48f184b8553bcbacec8ec3, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4968295666471381137, guid: db602cfbca48f184b8553bcbacec8ec3, type: 3}
       propertyPath: m_Name
       value: PLAYER Variant

@@ -12,6 +12,7 @@ TagManager:
   - STOP
   - PROP
   - Lazarus
+  - THEEND
   layers:
   - Default
   - TransparentFX
