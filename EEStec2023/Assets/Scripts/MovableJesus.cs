@@ -27,9 +27,8 @@ public class MovableJesus : MonoBehaviour
 
     //private bool STOP = false;
 
-    private bool summoned = false;
     private float x, y;
-    private int JUGGLE_PARAM = 40;
+    public int JUGGLE_PARAM = 40;
     // Start is called before the first frame update
 
 
