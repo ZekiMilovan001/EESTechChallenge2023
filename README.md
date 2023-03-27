@@ -1,8 +1,9 @@
 # Vaskrs
-Vaskrs is a game we made during 24h period on EESTech hackathon with a theme **"Choose One"**.\
+Vaskrs is a game we made during a 24 - hour period at the EESTech hackathon, with a theme **"Choose One"**.\
 We worked in a team of three and we got a chance to develop our gamedev skills and our teamwork.
 
-It is a story time game about saving Jesus Christ. Trough out the game we have multiple choices of witch some are moral and some are not. If we choose the non moral path, usually the easier path it will cost us in the long run.
+The game is a story-based adventure that revolves around saving Jesus Christ. \
+Throughout the game, you are presented with various choices, some of which are moral and others that are not. If we choose the non-moral path, it often comes at a cost in the long run, and if we decide to stay at the moral path, sometimes more difficult path, we get awarded at the end.
 
 ## Video exaple
 You can check out demo of the game we made here:
