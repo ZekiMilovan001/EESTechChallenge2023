@@ -14,7 +14,7 @@ public class SecretSupperController : MonoBehaviour
     }
     void Start()
     {
-        //canvas.SetActive(false);
+        canvas.SetActive(false);
     }
 
     // Update is called once per frame
@@ -29,6 +29,11 @@ public class SecretSupperController : MonoBehaviour
             SceneManager.LoadScene("Guard");
 
         
+    }
+
+    public void loadGuard()
+    {
+        SceneManager.LoadScene("Guard");
     }
 
     
